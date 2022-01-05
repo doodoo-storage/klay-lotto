@@ -1,0 +1,192 @@
+[{
+  "constant": true,
+  "inputs": [],
+  "name": "feeTo",
+  "outputs": [
+    {
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [],
+  "name": "joinLottey",
+  "outputs": [],
+  "payable": true,
+  "stateMutability": "payable",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "feeToSetter",
+  "outputs": [
+    {
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [
+    {
+      "name": "",
+      "type": "uint256"
+    },
+    {
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "name": "joinAddrList",
+  "outputs": [
+    {
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "getLotteyAmount",
+  "outputs": [
+    {
+      "name": "lotteyAmount",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [
+    {
+      "name": "randomCount",
+      "type": "uint256"
+    }
+  ],
+  "name": "endLottey",
+  "outputs": [],
+  "payable": true,
+  "stateMutability": "payable",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "lotteryWinner",
+  "outputs": [
+    {
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "getCurrentRoundJoinTotalCount",
+  "outputs": [
+    {
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "getRound",
+  "outputs": [
+    {
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [
+    {
+      "name": "pageNumber",
+      "type": "uint256"
+    },
+    {
+      "name": "pageSize",
+      "type": "uint256"
+    }
+  ],
+  "name": "getJoinAddressList",
+  "outputs": [
+    {
+      "name": "",
+      "type": "address[]"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "lotteryWinAmount",
+  "outputs": [
+    {
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [
+    {
+      "name": "_feeTo",
+      "type": "address"
+    }
+  ],
+  "name": "setFeeTo",
+  "outputs": [],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "inputs": [
+    {
+      "name": "_feeToSetter",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+}]

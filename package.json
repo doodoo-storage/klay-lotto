@@ -19,6 +19,12 @@
   "homepage": "https://github.com/doodoo-storage/klay-lotto#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2"
+    "babel-preset-react-app": "^3.1.2",
+    "caver-js": "^1.6.5",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^17.0.8"
   }
 }
