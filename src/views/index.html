@@ -26,7 +26,7 @@
     const getContract = () => {
       if (contract) return contract;
 
-      contract = new caver.klay.Contract([
+      contract = new caver.klay.Contract(
         [
           {
             "constant":true,
@@ -233,23 +233,34 @@
             "type":"function",
             "signature":"0xa6c0fc9c"
           }
-        ]
       ], '0x0f39F446DBF7652f67963C205956E27BD07ebF96');
 
       return contract;
     }
 
     const getRound = async () => {
-      const lotteryContract = getContract();
-      const round = await lotteryContract.methods.getRound().call();
-      return round;
+      const contract = getContract();
+      const round = await contract.methods.getRound().call();
+      console.log(test);
     }
+
+    const setFeeTo = async () => {
+      const contract = getContract();
+      const result = await contract.methods.setFeeTo(klaytn.selectedAddress).send({
+        from: klaytn.selectedAddress,
+        gas: 10000000000
+      });
+      console.log(result);
+    }
+
+
   </script>
   <header>
     <div class="row mt-4">
       <div class="col-10">
         <button type="button" class="btn btn-success" id="connect" onclick="connect();">connect</button>
         <button type="button" class="btn btn-primary" id="kip17Mint" onclick="getRound();">getRound</button>
+        <button type="button" class="btn btn-warning" id="kip17Mint" onclick="setFeeTo();">setFeeTo</button>
       </div>
     </div>
   </header>
