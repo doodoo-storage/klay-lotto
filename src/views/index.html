@@ -241,7 +241,8 @@
     const getRound = async () => {
       const contract = getContract();
       const round = await contract.methods.getRound().call();
-      console.log(test);
+
+      console.log(`round: ${round}`);
     }
 
     const setFeeTo = async () => {
@@ -250,19 +251,54 @@
         from: klaytn.selectedAddress,
         gas: 10000000000
       });
-      console.log(result);
+      console.log(`result: ${result}`);
     }
 
+    const getLotteyAmount = async () => {
+      const contract = getContract();
+      const lotteryAmount = await contract.methods.getLotteyAmount().call();
+
+      console.log(`lotteryAmount: ${lotteryAmount}`);
+    }
+
+    const joinLottey = async () => {
+      const contract = getContract();
+      const result = await contract.methods.joinLottey().send({
+        from: klaytn.selectedAddress,
+        gas: 10000000000,
+        value: caver.utils.convertToPeb(1, 'KLAY')
+      });
+
+      console.log(`result: ${result}`);
+    }
+
+    const getCurrentRoundJoinTotalCount = async () => {
+      const contract = getContract();
+      const count = await contract.methods.getCurrentRoundJoinTotalCount().call();
+
+      console.log(`count: ${count}`);
+    }
+
+    const endLottey = async () => {
+      const contract = getContract();
+      const result = await contract.methods.endLottey(1);
+
+      console.log(`result: ${result}`);
+    }
 
   </script>
-  <header>
+  <div class="container">
     <div class="row mt-4">
-      <div class="col-10">
+      <div class="col-12">
         <button type="button" class="btn btn-success" id="connect" onclick="connect();">connect</button>
-        <button type="button" class="btn btn-primary" id="kip17Mint" onclick="getRound();">getRound</button>
-        <button type="button" class="btn btn-warning" id="kip17Mint" onclick="setFeeTo();">setFeeTo</button>
+        <button type="button" class="btn btn-primary" id="getRound" onclick="getRound();">getRound</button>
+        <button type="button" class="btn btn-warning" id="setFeeTo" onclick="setFeeTo();">setFeeTo</button>
+        <button type="button" class="btn btn-success" id="getLotteyAmount" onclick="getLotteyAmount();">getLotteyAmount</button>
+        <button type="button" class="btn btn-primary" id="joinLottey" onclick="joinLottey();">joinLottey</button>
+        <button type="button" class="btn btn-warning" id="getCurrentRoundJoinTotalCount" onclick="getCurrentRoundJoinTotalCount();">getCurrentRoundJoinTotalCount</button>
+        <button type="button" class="btn btn-success" id="endLottey" onclick="endLottey();">endLottey</button>
       </div>
     </div>
-  </header>
+  </div>
 </body>
 </html>
