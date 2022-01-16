@@ -249,7 +249,7 @@
       const contract = getContract();
       const result = await contract.methods.setFeeTo(klaytn.selectedAddress).send({
         from: klaytn.selectedAddress,
-        gas: 10000000000
+        gas: 100000
       });
       console.log(`result: ${result}`);
     }
@@ -265,8 +265,8 @@
       const contract = getContract();
       const result = await contract.methods.joinLottey().send({
         from: klaytn.selectedAddress,
-        gas: 10000000000,
-        value: caver.utils.convertToPeb(1, 'KLAY')
+        gas: 300000,
+        value: 10**18
       });
 
       console.log(`result: ${result}`);
